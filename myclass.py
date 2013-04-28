@@ -13,12 +13,17 @@ class Nick(): # This is how you declare a class in Python
 		for element in self.theList: # This iterates over each item in self.theList in order (see Python generators, they're awesome)
 			print element
 
+	def __str__(self): # Calling print X on an object will output the string returned in X.__str__()
+		return "Nick object with num = {}".format(self.num)
+
 class SuperNick(Nick): # This is how you declare a derived class; the base class goes in the parentheses
 	def __init__(self, num = 0):
 		Nick.__init__(self, num)
 
 	def kirby(self):
-		print "<(^_^<)"
+		print "\n<(^_^<)\n"
+		print "<(^_^)>\n"
+		print "(>^_^)>\n"
 
 if __name__ == '__main__':
 	sn = SuperNick()
