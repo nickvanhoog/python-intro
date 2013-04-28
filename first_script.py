@@ -1,6 +1,9 @@
 #!/usr/bin/python
 import sys # sys is a "module", this is analogous to #include <iostream>
 
+# NOTE: Terms in double quotes ("term") are things that you should Google to get more info about.
+#       Typically searching for "Python <term>" will yield lots of useful information.
+
 # A function is defined with the def keyword.
 def main():
 	# Python statements do not need a semicolon at the end!
@@ -21,15 +24,16 @@ def main():
 
 	print
 
+	# You can use the built-in "range()" function to loop over a range of numbers like this. Also see "xrange()".
 	for i in range(5):
 		print i
 
 	print
 
 	# if statements work as expected; note the "elif" instead of "else if"
-	if num is None: # None is analogous to NULL in C++
+	if num is None: # None is analogous to NULL in C++. The is operator compares the identities of its arguments, not their values. See id() built-in function.
 		print "num is None"
-	elif num is not None:
+	elif num is not None: # The is not operator acts as you'd expect; x is not y returns true if id(x) != id(y)
 		print "num is not None"
 	else:
 		print "I just wanted to show an else section"
@@ -38,9 +42,9 @@ def main():
 
 	# Exceptions are cool! Use them!
 	try:
-		print y # y has not been defined; notice this was only caught once we actually ran this code
+		print y # y has not been defined; notice this error was only caught once we actually ran this code. Way different than C++.
 	except NameError: # NameError is a built-in Python exception
-		print 'Caught exception'
+		print 'We caught an exception!'
 
 	return 0 # A function without a return value implicitly returns None
 
