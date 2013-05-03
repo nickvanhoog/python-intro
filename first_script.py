@@ -19,8 +19,8 @@ def main():
 	num = 0;
 	while (num < 3):
 		#Indentation is not optional!
-		print "num is now: {}".format(num) # Use str.format() to put values into strings
-		num += 1 # No increment (num++) / decrement (num--) operator
+		print "num is now: {}".format(num) # Use str.format() to format strings
+		num += 1 # There is no increment (num++) / decrement (num--) operator
 
 	print
 
@@ -48,8 +48,8 @@ def main():
 
 	return 0 # A function without a return value implicitly returns None
 
-def printArg(arg):
+def print_arg(arg):
 	print arg # To print something, just write "print <thing you want to print>" (without the < >). This automatically appends a newline.
 
 if __name__ == '__main__': # Calling this with "python first_script.py" sets __name__ to '__main__'
-	main()
+	sys.exit(main())
