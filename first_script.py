@@ -12,11 +12,11 @@ def main():
 	x = "Now x is a string" # You can assign any new value to an existing variable.
 	x = 'x is still a string' # Strings can be written with single or double quotes
 
-	printArg(x) # Function calls are just as you'd expect
+	print_arg(x) # Function calls are just as you'd expect
 
 	print # prints a black line
 
-	num = 0;
+	num = 0
 	while (num < 3):
 		#Indentation is not optional!
 		print "num is now: {}".format(num) # Use str.format() to format strings
@@ -43,7 +43,7 @@ def main():
 	# Exceptions are cool! Use them!
 	try:
 		print y # y has not been defined; notice this error was only caught once we actually ran this code. Way different than C++.
-	except NameError: # NameError is a built-in Python exception
+	except NameError as ne: # NameError is a built-in Python exception
 		print 'We caught an exception!'
 
 	return 0 # A function without a return value implicitly returns None
